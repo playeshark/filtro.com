@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Filltro - O Filtro da Verdade</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Filltro</h1>
+    <p>O Filtro da Verdade: busque com segurança.</p>
+
+    <form method="POST">
+        <input type="text" name="query" placeholder="Digite sua busca..." required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if results %}
+        <h2>Resultados:</h2>
+        <ul>
+        {% for result in results %}
+            <li>
+                <a href="{{ result.url }}" target="_blank">{{ result.url }}</a> - {{ result.status }}
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
