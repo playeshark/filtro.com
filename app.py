@@ -4,8 +4,7 @@ from googleapiclient.discovery import build # type: ignore
 app = Flask(__name__)
 
 # Configure sua chave de API e ID do mecanismo de busca
-API_KEY = 'AIzaSyDiqaC1Q0ab1vg2d97_8ywGf0kap5TIQ6g'
-CSE_ID = 'f5d24e147bf8241c3'  # Apenas o ID, sem <script>
+
 
 # Função para buscar no Google
 def search_google(query):
